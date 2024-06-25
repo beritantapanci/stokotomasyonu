@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.YoneticiController">
+   <children>
+      <SplitPane layoutX="95.0" layoutY="92.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="598.0">
+               <children>
+                  <TextField fx:id="txt_arama" layoutX="19.0" layoutY="21.0" onAction="#txt_arama_Action" onKeyPressed="#txt_arama_Keypressed" prefHeight="32.0" prefWidth="174.0" promptText="Ürün Ara" />
+                  <Button fx:id="btn_ekle" layoutX="466.0" layoutY="115.0" mnemonicParsing="false" onAction="#btn_ekle_Click" prefHeight="24.0" prefWidth="56.0" text="ekle" />
+                  <Button fx:id="btn_sil" layoutX="466.0" layoutY="157.0" mnemonicParsing="false" onAction="#btn_sil_Click" prefHeight="24.0" prefWidth="56.0" text="sil" />
+                  <Button fx:id="btn_guncelle" layoutX="466.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn_guncelle_Click" text="guncelle" />
+                  <TableView fx:id="tableView_Aramalar" layoutY="312.0" prefHeight="272.0" prefWidth="598.0">
+                    <columns>
+                      <TableColumn fx:id="ID" prefWidth="30.0" text="ID" />
+                      <TableColumn fx:id="barkod_no" prefWidth="72.0" text="Barkod No" />
+                        <TableColumn fx:id="kategori" prefWidth="89.0" text="Kategori" />
+                        <TableColumn fx:id="urun_adi" prefWidth="84.0" text="Ürün Adı" />
+                        <TableColumn fx:id="alis_fiyati" prefWidth="60.0" text="Alış Fiyatı" />
+                        <TableColumn fx:id="satis_fiyati" prefWidth="79.0" text="Satış Fiyatı" />
+                        <TableColumn fx:id="stok" prefWidth="42.0" text="Stok" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="55.0" layoutY="80.0" text="Barkod no" />
+                  <TextField fx:id="txt_barkod" layoutX="123.0" layoutY="76.0" />
+                  <Label layoutX="55.0" layoutY="119.0" text="Kategori" />
+                  <Label layoutX="55.0" layoutY="161.0" text="Urun Adi" />
+                  <TextField fx:id="txt_kategori" layoutX="123.0" layoutY="115.0" />
+                  <TextField fx:id="txt_urun_adi" layoutX="123.0" layoutY="157.0" />
+                  <Label layoutX="53.0" layoutY="201.0" text="Alis Fiyati" />
+                  <Label layoutX="55.0" layoutY="235.0" text="Satis Fiyati" />
+                  <Label layoutX="66.0" layoutY="276.0" text="Stok" />
+                  <TextField fx:id="txt_alis_fiyati" layoutX="123.0" layoutY="197.0" />
+                  <TextField fx:id="txt_satis_fiyati" layoutX="123.0" layoutY="230.0" />
+                  <TextField fx:id="txt_stok" layoutX="123.0" layoutY="272.0" />
+                  <Button fx:id="arabtn" layoutX="466.0" layoutY="64.0" mnemonicParsing="false" onAction="#araclick" prefHeight="24.0" prefWidth="56.0" text="Ara" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KullaniciController">
+   <children>
+      <SplitPane dividerPositions="0.30402010050251255" layoutX="142.0" layoutY="85.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="txt_arama" layoutX="20.0" layoutY="49.0" onAction="#txt_arama_Action" onKeyPressed="#txt_arama_Keypressed" prefHeight="38.0" prefWidth="149.0" promptText="Ürün Ara" />
+                  <Button fx:id="sepet_ekle" layoutX="278.0" layoutY="24.0" mnemonicParsing="false" onAction="#sepet_ekle_Click" prefHeight="25.0" prefWidth="88.0" text="Sepete Ekle" />
+                  <Button fx:id="sepet" layoutX="278.0" layoutY="72.0" mnemonicParsing="false" onAction="#sepet_Click" prefHeight="25.0" prefWidth="88.0" text="Sepet" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableView_Aramalar" prefHeight="240.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="barkod_no" prefWidth="66.0" text="Barkod No" />
+                        <TableColumn fx:id="kategori" prefWidth="108.0" text="Kategori" />
+                        <TableColumn fx:id="urun_adi" prefWidth="113.0" text="Ürün Adı" />
+                        <TableColumn fx:id="satis_fiyat" prefWidth="58.0" text="Fiyat" />
+                        <TableColumn fx:id="stok" prefWidth="54.0" text="Stok" />
+                        <TableColumn fx:id="alis_fiyati" prefWidth="75.0" text="Alis" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
